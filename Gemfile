@@ -32,11 +32,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-end
-
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -45,3 +40,64 @@ group :development do
   gem 'spring'
 end
 
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+
+  #by donald
+  gem 'rspec-rails'
+  gem 'rspec-its'
+  gem 'simplecov', :require => false
+  gem 'guard-rspec'
+  gem 'spork-rails'
+  gem 'guard-spork'
+  gem 'childprocess'
+  gem 'rails-erd'
+  gem 'pry-rails'
+  gem 'guard-rails'
+  gem 'guard-livereload'
+  gem 'guard-bundler'
+end
+
+group :test do
+  gem 'selenium-webdriver', '~> 2.42.0'
+  gem 'capybara', '~> 2.3.0'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'launchy'
+end
+
+
+gem 'shoulda'
+gem 'date_validator'
+gem 'foreigner'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
+gem 'searchkick'
+gem 'money'
+gem 'money-rails'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+gem 'geocoder'
+gem 'geo_ip'
+gem 'stripe'
+gem 'wkhtmltopdf-binary'
+gem 'wicked_pdf'
+gem 'premailer-rails'
+gem 'nokogiri'
+gem 'acts_as_votable', '~> 0.10.0'
+gem 'aws-sdk-v1'
+gem 'carrierwave'
+gem 'fog'
+gem 'figaro'
+gem 'mini_magick'
+gem 'responders'
+gem 'devise' # User management
+gem 'elastic-beanstalk'
+gem 'font-awesome-rails' # Font-awesome icon
+gem 'mail_form' #Forms, mail
+gem 'simple_form' #Forms, mail
+
+group :production do
+  gem 'rails_12factor'
+end
